@@ -161,15 +161,15 @@ body {
     background-color: #e68a00;
   }
   
-  /* Responsive layout for smaller screens */
+
   @media (max-width: 768px) {
     .cart-layout {
       flex-direction: column;
     }
     
-    .checkout-section {
-      order: -1; /* Show summary at top on mobile */
-    }
+    /* .checkout-section {
+      order: -1;
+    } */
     
     .cart-summary {
       position: relative;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>HOME</title>
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
@@ -12,18 +12,22 @@
             <h2>Welcome <span id="userName"></span>!</h2>
             <div class="user-actions">
                 <button id="logoutBtn">Logout</button>
-                <!-- <a href="cart.html" class="cart-link">
-                    My Cart (<span class="cart-count" id="cartCount">0</span>)
-                </a> -->
-
-
                 <a href="cart.html" class="cart-button">
                     Cart <span class="cart-count" id="cartCount">0</span>
                 </a>
-
             </div>
         </div>
+    </div>
 
+    <!-- Sale Popup -->
+    <div id="salePopup" class="sale-popup">
+        <div class="sale-popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="sale-badge">65% OFF</div>
+            <h2>Exclusive Sale!</h2>
+            <p>Limited time offer for our valued customers</p>
+            <button class="shop-now-btn">Shop Now</button>
+        </div>
     </div>
 
     <div class="container">

@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('userName').textContent = currentUser.name;
 
+    setTimeout(showSalePopup, 3500);
+
     document.getElementById('logoutBtn').addEventListener('click', function () {
         localStorage.removeItem('currentUser');
         window.location.href = 'index.html';
@@ -294,5 +296,30 @@ document.addEventListener('DOMContentLoaded', function () {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
         document.getElementById('cartCount').textContent = totalItems;
+    }
+
+    // Sale popup
+    function showSalePopup() {
+        const salePopup = document.getElementById('salePopup');
+        salePopup.style.display = 'flex';
+
+        const closePopup = document.querySelector('.close-popup');
+        closePopup.addEventListener('click', function() {
+            salePopup.style.display = 'none';
+        });
+
+        salePopup.addEventListener('click', function(event) {
+            if (event.target === salePopup) {
+                salePopup.style.display = 'none';
+            }
+        });
+
+        const shopNowBtn = document.querySelector('.shop-now-btn');
+        shopNowBtn.addEventListener('click', function() {
+            salePopup.style.display = 'none';
+            document.querySelector('h2:contains("Products")').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     }
 });

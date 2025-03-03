@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Welcome <span id="userName"></span>!</h2>
+            <div class="user-actions">
+                <button id="logoutBtn">Logout</button>
+                <!-- <a href="cart.html" class="cart-link">
+                    My Cart (<span class="cart-count" id="cartCount">0</span>)
+                </a> -->
+
+
+                <a href="cart.html" class="cart-button">
+                    Cart <span class="cart-count" id="cartCount">0</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="api-toggle">
+            <button id="fakeStoreBtn" class="active">FakeStore API</button>
+            <button id="dummyJsonBtn">DummyJSON API</button>
+        </div>
+        
+        <div class="filters">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+            <div class="category-filter">
+                <select id="categorySelect">
+                    <option value="">All Categories</option>
+                    <!-- categories dynamic -->
+                </select>
+            </div>
+        </div>
+        
+        <div id="categoryButtons" class="category-buttons">
+            <!-- category buttons dynamic -->
+        </div>
+        
+        <h2>Products</h2>
+        <div id="loading" class="loading">Loading products...</div>
+        <div id="productsContainer"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Shopping Cart</h2>
+            <button class="continue-shopping" onclick="window.location.href = 'homepage.html'">
+                Continue Shopping
+            </button>
+        </div>
+        
+        <div class="cart-layout">
+            <!-- Left section: Cart Items -->
+            <div class="cart-items-section">
+                <div id="cartItems">
+                    <!-- Cart items dynamic -->
+                </div>
+                
+                <div id="emptyCart" class="empty-cart" style="display: none;">
+                    <h3>Your cart is empty</h3>
+                    <p>Go back to the homepage to add some products</p>
+                </div>
+            </div>
+            
+            <!-- Right section: Checkout Summary -->
+            <div class="checkout-section">
+                <div id="cartSummary" class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="subtotalPrice">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="totalPrice">$0.00</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="clearCartBtn" class="remove-btn">Clear Cart</button>
+                        <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/add_to_cart.js"></script>
+</body>
+</html>

@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (password.length < 6) {
             document.getElementById('passwordError').textContent = 'Password must be at least 6 characters';
             isValid = false;
+        } else if (!/[A-Z]/.test(password) || !/[a-z]/.test(password)) {
+            document.getElementById('passwordError').textContent = 'Password must contain at least one uppercase and one lowercase letter';
+            isValid = false;
         }
 
         if (!confirmPassword) {
